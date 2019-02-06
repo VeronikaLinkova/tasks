@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Fibonacci
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            FibonacciSequence();            
+            int answer = Convert.ToInt32(Console.ReadLine());
+            while (answer == 1)
+            {
+                FibonacciSequence();
+            }
+        }
+
+        private static void FibonacciSequence()
+        {
+            Console.WriteLine("Введите целое число");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int x = 0;
+            int y = 1;
+            int z = x + y;
+            while (number >= z)
+            {
+                z = x + y;
+                Console.Write("{0}, ", z);
+                x = y;
+                y = z;
+
+            }
+            Console.WriteLine("Для продолжения программы нажмите 1, для выхода из программы нажмите 2");
+        }
+    }
+}
