@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Animal
+{
+    class Animal
+    {
+        public string name;
+        public int lifespan;
+        public bool predator;
+        public double weight;
+        public int lenght;
+
+        public Animal() {}  // 1-конструктор   
+
+        public Animal(string name, int lifespan, bool predator, double weight, int lenght)
+        {
+            this.name = name;
+            this.lifespan = lifespan;
+            this.predator = predator;
+            this.weight = weight;
+            this.lenght = lenght;
+        }        //2-ой конструктор
+        
+        public Animal(string name, bool predator, int lenght)
+        {
+            this.name = name;
+            this.predator = predator;
+            this.lenght = lenght;
+        } //3-ий конструктор
+    }
+}
