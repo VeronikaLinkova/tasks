@@ -13,19 +13,21 @@ namespace Animal
             Animal Cat = new Animal(); //применяю пустой конструктор
             Animal Rabbit = new Animal();
             Animal Snake = new Animal("cobra", 25, true, 10, 20);                   
-            Animal Dog = new Animal("pug", true, 20);
+            Animal Dog = new Animal("dog", true, 20);
             Animal Elephant = new Animal("elephant", false, 60);
             Animal Horse = new Animal("horse", 25, false, 10.5, 20);
             Animal Tiger = new Animal("tiger", 18, true, 10, 20);
             Animal Pig = new Animal("minipig", 18, true, 10, 20);
             Animal Wolf = new Animal();
             Animal Fox = new Animal();
-                       
+
+                                 
 
             Animal[] animals = new Animal[10] {Cat,Rabbit,Snake,Dog,Elephant,Horse,Tiger,Pig,Wolf,Fox };
             foreach (Animal anim in animals)
             {
-                Console.WriteLine(anim.name + " " + anim.lifespan + " " + anim.predator + " " + anim.weight + " " + anim.lenght + "\n");
+                Animal.PrintInfoAboutAnimals(anim);
+
             }
                          
             Console.ReadKey();
