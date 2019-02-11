@@ -14,7 +14,10 @@ namespace Animal
         public double weight;
         public int lenght;
 
-        public Animal() {}  // 1-конструктор   
+        public Animal()
+        {
+            this.name = "";
+        }  // 1-конструктор   
 
         public Animal(string name, int lifespan, bool predator, double weight, int lenght)
         {
@@ -31,5 +34,25 @@ namespace Animal
             this.predator = predator;
             this.lenght = lenght;
         } //3-ий конструктор
+
+        public static  void PrintInfoAboutAnimals(Animal animal)
+        {
+            if (animal.name == "")
+            {
+                animal.name = "Животинка без имени";             
+            }
+
+            Console.WriteLine($"У животного {animal.name} продолжительность жизни {animal.lifespan} лет, длина тела: {animal.lenght}, вес:{animal.weight}");
+            if (animal.predator)
+            {
+                Console.WriteLine($"{animal.name} является хищником\n");
+            }
+            else
+            {
+                Console.WriteLine($"{animal.name} не является хищником\n");
+            }
+            Console.WriteLine("------------------------------------------------------------------------------");
+
+        }
     }
 }
