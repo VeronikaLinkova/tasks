@@ -63,5 +63,37 @@ namespace Домашка_от_Егора
             return rez;
         }
         
+         //задание 5
+        public void krugVKvadrate(double skv, double skr)
+        {
+            //d - диаметр круга
+            //a - сторона квадрата
+            // p - число пи
+            // d_kv - диаметр квадрата
+            double a = 0;
+            double p = 3.1415926535897931;
+            double d_kv = Math.Sqrt(2 * (a * a));
+            a = Math.Sqrt(skv);
+            double d = Math.Sqrt((4 * skr) / p);
+            if (d <= a)
+            {
+                Console.WriteLine("Круг помещается в квадрате");
+            }
+            else
+            {
+                Console.WriteLine("Круг не помещается в квадрате");
+            }
+
+
+            if (d_kv <= d)
+            {
+                Console.WriteLine("Квадрат помещается в круг");
+            }
+            else
+            {
+                Console.WriteLine("Квадрат не помещается в круг");
+            }
+        }     
+        
     }
 }
