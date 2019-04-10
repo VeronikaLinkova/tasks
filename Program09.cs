@@ -26,6 +26,7 @@ namespace Домашка_от_Егора
             Console.WriteLine(Ololo.Kelvin(-100));
             Console.ReadKey();
             Console.WriteLine(Ololo.Val());
+            Ololo.krugVKvadrate(30, 40);
             Console.ReadKey();
         }
 
